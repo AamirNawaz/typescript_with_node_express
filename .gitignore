@@ -9,4 +9,5 @@ certs/**/*
 *.mobileprovision
 *.orig.*
 
-package-lock.json
+/logs
+logs

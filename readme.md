@@ -4,33 +4,25 @@
 
 # For initialzing project - run the above in the root of the project
 
--> `mkdir node-projects`
--> `cd node-projects/`
--> `npm init -y`
+-> `mkdir node-projects` -> `cd node-projects/` -> `npm init -y`
 
 # install typescript as dev dependenciy
 
 `npm install -D typescript`
 
-Install dotenv package for using enviroment variable in the app
-`npm i express dotenv`
+Install dotenv package for using enviroment variable in the app `npm i express dotenv`
 
 # step2:
 
-install types for checking its type while writing code.
-`npm i -D typescript @types/express @types/node`
+install types for checking its type while writing code. `npm i -D typescript @types/express @types/node`
 
-Initialze the Typescript with running the below command:
-`npx tsc --init`
+Initialze the Typescript with running the below command: `npx tsc --init`
 
 tsconfig.json file will be created now open this file and do a miror change.
 
-`target`: Enables the specification of the target JavaScript version that the compiler will output
-`module`: Facilitates the utilization of a module manager in the compiled JavaScript code, CommonJS is supported and is a standard in Node.js
-`strict`: Toggles strict type-checking protocols
-`esModuleInterop`: Enables the compilation of ES6 modules to CommonJS modules
-`skipLibCheck`: When set to true, bypasses type-checking of default library declaration files
-`forceConsistentCasingInFileNames`: When set to true, enforces case-sensitive file naming
+`target`: Enables the specification of the target JavaScript version that the compiler will output `module`: Facilitates the utilization of a module manager in the compiled JavaScript code, CommonJS
+is supported and is a standard in Node.js `strict`: Toggles strict type-checking protocols `esModuleInterop`: Enables the compilation of ES6 modules to CommonJS modules `skipLibCheck`: When set to
+true, bypasses type-checking of default library declaration files `forceConsistentCasingInFileNames`: When set to true, enforces case-sensitive file naming
 
 By default, the value of this option is set to the project’s root. Change it to `dist`, as shown below:
 
@@ -76,4 +68,10 @@ Install nodemon to watch files and changes
      "dev": "nodemon src/index.ts"
  }
  }
+
+//  for prettier and formating
+ "scripts": {
+        "build": "rm -rf build/ && prettier --write source/ && tsc",
+        "start": "nodemon src/app.ts"
+    },
 ```
