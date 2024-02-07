@@ -3,7 +3,7 @@ import { UserService } from '../services/user/UserService';
 import { UserServiceImpl } from '../services/user/UserServiceImp';
 
 // Inversion of Control (IoC)
-class Container {
+class IocContainer {
     private instances: { [key: string]: any } = {};
     register(key: string, instance: any): void {
         this.instances[key] = instance;
@@ -14,7 +14,7 @@ class Container {
     }
 }
 
-const container = new Container();
+const container = new IocContainer();
 container.register('userService', new UserServiceImpl());
 container.register('userController', new UserController(container.resolve<UserService>('userService')));
 export default container;

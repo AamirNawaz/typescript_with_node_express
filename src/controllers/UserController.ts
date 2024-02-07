@@ -22,4 +22,8 @@ export class UserController {
             user
         });
     }
+    getUsers(req: Request, res: Response): void {
+        const users = this.userService.getUsers();
+        res.status(200).json(users);
+    }
 }
