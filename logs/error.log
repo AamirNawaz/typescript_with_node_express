@@ -1,1 +1,3 @@
 2024-02-07 18:47:53:4753 [31merror[39m: [31mRoute not found[39m
+2024-02-07 20:55:04:554 [31merror[39m: [31mCannot set headers after they are sent to the client[39m
+2024-02-07 20:56:46:5646 [31merror[39m: [31mCannot set headers after they are sent to the client[39m

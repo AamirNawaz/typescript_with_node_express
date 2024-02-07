@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 
-// import routing files
 import userRoutes from './routes/UserRoutes';
 import Logger from './config/LoggerMiddleware';
 
